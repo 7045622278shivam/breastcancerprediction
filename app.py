@@ -35,7 +35,11 @@ def recommend(item: Item):
     # Print the data received
     # print(item)
     # Make a prediction using the model
-    prediction = model.predict([[17.99,10.38,122.80,1001.0,0.118]])
+    prediction = model.predict([[item.radius_mean,
+    item.texture_mean,
+    item.perimeter_mean,
+    item.area_mean,
+    item.smoothness_mean]])
     
    
     # Retrieve the class label
